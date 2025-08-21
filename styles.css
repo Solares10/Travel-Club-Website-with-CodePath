@@ -1,0 +1,364 @@
+/* Updated styles.css */
+
+/* Your base styles remain unchanged */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #fcefe9;
+  color: #4a3b31;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff7f3;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4a3b31;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background-color: #eaa4a4;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.theme-toggle:hover {
+  background-color: #d98d8d;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark .navbar,
+body.dark section,
+body.dark .trip-card,
+body.dark .about-card,
+body.dark .contact-form {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark p,
+body.dark a,
+body.dark .contact-title,
+body.dark .trip-info p,
+body.dark .about-card p,
+body.dark .contact-subtext,
+body.dark .info-block p {
+  color: #f1f1f1;
+}
+
+body.dark input,
+body.dark textarea {
+  background-color: #333;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #bbb;
+}
+
+body.dark .dot.active {
+  background-color: #ffc1c1;
+}
+
+body.dark .theme-toggle {
+  background-color: #555;
+  color: #fff;
+}
+
+body.dark .about-section,
+body.dark .about-intro,
+body.dark .about-cta,
+body.dark .weekly-meetings {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+body.dark .about-card {
+  background-color: #333;
+}
+
+/* General Layout */
+.slideshow, .intro-text, .about-photo-banner, .about-intro, .about-cta, .weekly-meetings, .contact-wrapper, .trip-header, .trip-section {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff7f3;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+}
+
+/* New Slideshow Styles */
+.slideshow {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 20px;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-img.active {
+  opacity: 1;
+}
+
+.trip-list, .about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  margin-bottom: 60px;
+}
+
+/* About Section */
+.about-photo-banner {
+  margin: 30px auto;
+}
+
+.about-photo {
+  width: 320px;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-intro,
+.about-cta,
+.weekly-meetings,
+.contact-wrapper,
+.trip-header,
+.trip-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff7f3;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.about-cards,
+.trip-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  margin-bottom: 60px;
+}
+
+.about-card,
+.trip-card {
+  background-color: #fff7f3;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.trip-card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.trip-card img {
+  width: 100%;
+  max-width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px 0 0 20px;
+}
+
+/* Buttons */
+.learn-more-btn, .join-club-btn, .view-btn, .send-btn, .book-btn {
+  background-color: #eaa4a4;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.learn-more-btn:hover, .join-club-btn:hover, .view-btn:hover, .send-btn:hover, .book-btn:hover {
+  background-color: #d98d8d;
+  transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-form {
+  background-color: #fff9f5;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff7f3;
+  color: #4a3b31;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #b1948e;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+  margin-bottom: 20px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff7f3;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  animation: scaleUp 0.6s ease forwards;
+}
+
+#modal-image {
+  width: 100px;
+  margin-top: 20px;
+  transition: transform 1s;
+}
+
+.modal.show #modal-image {
+  animation: spinImage 2s infinite linear;
+}
+
+@keyframes spinImage {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .trip-card {
+    flex-direction: column;
+  }
+
+  .trip-card img {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .trip-info {
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.largeFileOptimizations": false,
+  "search.exclude": {
+    "**/.vscode": true,
+    "**/.vscodeedu": true,
+    "**/*.code-workspace": true
+  },
+  "files.exclude": {
+    "**/.vscode": true,
+    "**/.vscodeedu": true,
+    "**/*.code-workspace": true
+  },
+  "terminal.integrated.enableImages": true,
+  "ipynb.pasteImagesAsAttachments.enabled": false
+}

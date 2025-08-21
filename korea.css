@@ -1,0 +1,292 @@
+/* Base */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcefe9;
+    color: #4a3b31;
+    line-height: 1.6;
+  }
+  /* Navbar */
+.navbar {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff7f3;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4a3b31;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background-color: #eaa4a4;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.theme-toggle:hover {
+  background-color: #d98d8d;
+}
+
+/* 🌙 Dark Mode Styles */
+body.dark {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark .navbar,
+body.dark section,
+body.dark .trip-card,
+body.dark .about-card,
+body.dark .contact-form {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark p,
+body.dark a,
+body.dark .contact-title,
+body.dark .trip-info p,
+body.dark .about-card p,
+body.dark .contact-subtext,
+body.dark .info-block p {
+  color: #f1f1f1;
+}
+
+body.dark input,
+body.dark textarea {
+  background-color: #333;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #bbb;
+}
+
+body.dark .dot.active {
+  background-color: #ffc1c1;
+}
+
+body.dark .theme-toggle {
+  background-color: #555;
+  color: #fff;
+}
+
+body.dark .about-section,
+body.dark .about-intro,
+body.dark .about-cta,
+body.dark .weekly-meetings {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+body.dark .about-intro h2,
+body.dark .about-intro p,
+body.dark .about-cta h3,
+body.dark .about-cta p,
+body.dark .weekly-meetings h4,
+body.dark .weekly-meetings p {
+  color: #f1f1f1;
+}
+
+body.dark .about-card {
+  background-color: #333;
+  color: #f1f1f1;
+}
+
+body.dark .about-card h3,
+body.dark .about-card p {
+  color: #f1f1f1;
+}
+  /* Hero Banner */
+  .hero-banner {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .hero-banner img {
+    width: 100%;
+    max-width: 950px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+  }
+  
+  .hero-banner h1 {
+    font-size: 2.4rem;
+    color: #c4766c;
+    margin: 0;
+  }
+  
+  .trip-date {
+    font-size: 1.1rem;
+    color: #a88a7d;
+    margin-top: 8px;
+  }
+  
+  /* Section Wrapper */
+  .trip-section {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 30px 25px;
+    background-color: #fff7f3;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .trip-section h2 {
+    font-size: 1.6rem;
+    color: #a86e6e;
+    margin-bottom: 20px;
+  }
+  
+  .trip-section p,
+  .trip-section ul li {
+    font-size: 1rem;
+    color: #4a3b31;
+    text-align: left;
+  }
+  
+  /* Two-column Layout */
+  .two-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  .two-column > div {
+    flex: 1 1 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.03);
+  }
+  
+  .two-column h2 {
+    font-size: 1.3rem;
+    color: #c4766c;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .two-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .two-column li::before {
+    content: "• ";
+    color: #c4766c;
+    margin-right: 6px;
+  }
+  
+  /* Book Button */
+  .book-btn {
+    background-color: #eaa4a4;
+    border: none;
+    padding: 14px 32px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 25px;
+  }
+  
+  .book-btn:hover {
+    background-color: #d98d8d;
+    transform: scale(1.05);
+  }
+  
+  /* Gallery */
+  .gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .gallery-grid img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* FAQ Section */
+  .faq ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .faq ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background: #f7e7e1;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .back-btn {
+    background-color: #eaa4a4;
+    color: white;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  .back-btn:hover {
+    background-color: #d98d8d;
+    transform: scale(1.05);
+  }
+  

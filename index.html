@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Club</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    #contact-form, #thank-you-message,
+    #rsvp-form, #rsvp-thankyou {
+      transition: opacity 0.3s ease;
+    }
+    .home-btn {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .home-btn:hover {
+      transform: scale(1.05);
+      background-color: #ff9dbb;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <h1 class="site-title">TRAVEL CLUB</h1>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#trips">Destinations</a>
+      <a href="#contact">Contact</a>
+      <a href="#rsvp">RSVP</a>
+    </nav>
+    <button id="toggle-theme" class="theme-toggle">🌙 Toggle Theme</button>
+  </header>
+
+<!-- Home Section -->
+<section id="home" class="slideshow">
+  <div class="carousel">
+    <img src="Japan.JPG" class="carousel-img active" alt="Plane">
+    <img src="pl.jpg" class="carousel-img" alt="Another Slide">
+    <img src="Korea.JPG" class="carousel-img" alt="Third Slide">
+  </div>
+</section>
+
+     
+  
+   
+
+  <!-- Welcome Section -->
+  <section class="intro-text">
+    <h2>Explore the World</h2>
+    <p>Discover new destinations, experience different cultures, and embark on unforgettable journeys with our travel club.</p>
+    <a href="#about" class="learn-more-btn">Learn More</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="about-photo-banner">
+      <img src="memebers.jpg" alt="Club Members Smiling" class="about-photo">
+    </div>
+    <div class="about-intro">
+      <h2>About Our Club</h2>
+      <p>We are passionate travelers who meet regularly to share stories, plan trips, and explore the world together. Whether you’re experienced or brand new to travel, you’re welcome here!</p>
+    </div>
+    <div class="about-cards">
+      <div class="about-card">
+        <h3>🌍 Why Join?</h3>
+        <p>Connect with travel lovers and explore incredible places together every 6 months.</p>
+      </div>
+      <div class="about-card">
+        <h3>💬 Our Promise</h3>
+        <p>Affordable, exciting travel with stress-free planning and awesome people.</p>
+      </div>
+      <div class="about-card">
+        <h3>📅 What To Expect</h3>
+        <p>Epic group adventures, cultural experiences, and new friendships.</p>
+      </div>
+      <div class="about-card">
+        <h3>🧭 We Got You</h3>
+        <p>From flights to fun, we plan it all — just show up and enjoy.</p>
+      </div>
+      <div class="about-card">
+        <h3>🏖️ Relax & Recharge</h3>
+        <p>Handpicked destinations perfect for unwinding, recharging, and making memories.</p>
+      </div>
+      <div class="about-card">
+        <h3>🎒 For Every Traveler</h3>
+        <p>Whether you're a solo explorer or a social butterfly, there's a perfect trip waiting for you.</p>
+      </div>
+    </div>
+    
+    <div class="about-cta">
+      <h3>✨ Join Us Today!</h3>
+      <p>Ready to explore? Sign up and let’s travel the world together!</p>
+      <button class="join-club-btn" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfFyDPW1hFnyexHW_0VhfN91cJbzADEnh6CAZpELwOHol6giA/viewform?usp=dialog'">Join Club</button>
+    </div>
+    <div class="weekly-meetings">
+      <h4>Weekly Meetings</h4>
+      <p><strong>Day:</strong> Every Sunday</p>
+      <p><strong>Time:</strong> 8:00 PM – 9:00 PM</p>
+      <p><strong>Location:</strong> Zoom</p>
+    </div>
+  </section>
+
+  <!-- Trips Section -->
+  <section id="trips" class="trip-section">
+    <h2>Upcoming/Past Trips</h2>
+    <p>Every 6 months, we travel somewhere amazing. Here’s a look:</p>
+    <div class="trip-list">
+      <div class="trip-card">
+        <img src="Japan.JPG" alt="Japan Trip">
+        <div class="trip-info">
+          <h3>Japan</h3>
+          <p class="date">January 15–24, 2025</p>
+          <p>Cherry blossoms, Tokyo Disney, and Mario Kart rides.</p>
+          <a href="Japan.html" target="_blank" class="view-btn">View Details</a>
+        </div>
+     
+     
+      </div>
+      <div class="trip-card">
+        <img src="Korea.JPG" alt="South Korea Trip">
+        <div class="trip-info">
+          <h3>South Korea</h3>
+          <p class="date">June 10–18, 2025</p>
+          <p>Palaces, shopping in Seoul, and Korean BBQ bliss.</p>
+          <a href="korea.html" target="_blank" class="view-btn">View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="contact-wrapper">
+  <h2 class="contact-title">CONTACT US</h2>
+  <p class="contact-subtext">Questions? Send us a message!</p>
+  
+  <div class="contact-info">
+    <div class="info-block">
+      <p>📧 <strong>Email</strong></p>
+      <p>solaresmichelle22@gmail.com</p>
+    </div>
+    <div class="info-block">
+      <p>📞 <strong>Phone</strong></p>
+      <p>(424)785-9018</p>
+    </div>
+    <div class="info-block">
+      <p>📍 <strong>Visit Us</strong></p>
+      <p>On Zoom</p>
+    </div>
+  </div>
+
+  <form id="contact-form" onsubmit="handleContactSubmit(event)" class="contact-form">
+    <h3>Send Us a Message</h3>
+    <div class="form-row">
+      <input type="text" id="name" name="name" placeholder="Name" required />
+      <input type="email" id="email" name="email" placeholder="Email" required />
+    </div>
+    <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+    <button type="submit" class="send-btn">Send</button>
+  </form>
+
+  <div id="thank-you-message" style="display: none; text-align: center; padding: 40px;">
+    <h2 style="color: #ff6fa1;">Thank You!</h2>
+    <p>Your message has been sent. We'll get back to you soon! 💌</p>
+    <button onclick="scrollToHome()" class="home-btn" style="margin-top: 20px;">Return to Home</button>
+  </div>
+
+  <!-- Fancy Toast Notification -->
+  <div id="toast" style="
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(255, 182, 193, 0.8);
+    backdrop-filter: blur(8px);
+    color: #4a3b31;
+    padding: 15px 25px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    font-weight: bold;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  ">
+    ✅ Message Sent!
+  </div>
+</section>
+
+  <!-- RSVP Section -->
+  <section id="rsvp" class="trip-section">
+    <div class="two-column">
+      <div>
+        <h2>📩 RSVP to Our Next Trip-South Korea</h2>
+        <p>Let us know you're joining our next trip. You'll show up on the guest list below after submitting the form!</p>
+      </div>
+      <div>
+        <h3>🧾 Attendee List</h3>
+        <ul id="rsvp-list" style="list-style: none; padding-left: 0;"></ul>
+      </div>
+    </div>
+    <form id="rsvp-form" class="contact-form" onsubmit="handleRSVPSubmit(event)">
+      <h3>RSVP Form</h3>
+      <div class="form-row">
+        <input type="text" id="rsvp-name" placeholder="Full Name" required />
+        <input type="email" id="rsvp-email" placeholder="Email" required />
+        <input type="text" id="rsvp-guest" placeholder="Bringing a Guest? Yes/No" required />
+      </div>
+      <button type="submit" class="send-btn">Submit RSVP</button>
+    </form>
+  </section>
+
+  <!-- RSVP Modal -->
+  <div id="rsvp-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close-btn">&times;</span>
+      <h2>Thanks for RSVPing, <span id="modal-name"></span>!</h2>
+      <p>We’re excited to travel with you! ✈️</p>
+      <img id="modal-image" src="airplane.png" alt="Flying Plane" />
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Travel Club. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
