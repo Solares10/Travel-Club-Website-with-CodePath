@@ -2,30 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Past Trip - Tokyo</title>
+
+  <!-- Fonts + Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Japan.css" />
 </head>
 <body>
   <!-- Navigation -->
   <header class="navbar">
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Main navigation">
       <a href="index.html#home">Home</a>
       <a href="index.html#about">About</a>
       <a href="index.html#trips">Destinations</a>
       <a href="index.html#contact">Contact</a>
     </nav>
-    
-  <!-- Theme Toggle Button -->
-  <button id="toggle-theme" class="theme-toggle">Toggle Theme</button>
-</header>
+    <button id="toggle-theme" class="theme-toggle" aria-label="Toggle color theme">🌙 Toggle Theme</button>
+  </header>
 
-<!-- Hero Section -->
-<section class="hero-banner">
-
+  <!-- Hero -->
+  <section class="hero-banner">
     <h1>Past Trip to Tokyo</h1>
-    <img src="japan.JPG" alt="Mount Fuji with Cherry Blossoms" />
+    <img src="Japan.JPG" alt="Mount Fuji with cherry blossoms and a bright sky" />
     <p class="trip-date">January 2025</p>
+  </section>
+
+  <!-- ✨ Cute, organized budget section -->
+  <section class="trip-section budget-card">
+    <div class="budget-header">
+      <h2>🧳 Before the Trip (Prep & Budget)</h2>
+      <span class="pill note">per person</span>
+    </div>
+
+    <!-- quick stats -->
+    <div class="budget-stats">
+      <div class="stat">
+        <span class="stat-label">Fixed total</span>
+        <span class="stat-value">$992.40</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Cash to bring</span>
+        <span class="stat-value">¥40k–¥50k (~$270–$350)</span>
+      </div>
+    </div>
+
+    <!-- itemized list -->
+    <ul class="budget-list">
+      <li class="row">
+        <span class="label">
+          <span class="chip">✈️ Flights</span>
+          <span class="line">Zip Airlines ticket</span>
+        </span>
+        <span class="price">$524.43</span>
+      </li>
+      <li class="row">
+        <span class="label">
+          <span class="chip">🏠 Stay</span>
+          <span class="line">Airbnb in Shinjuku</span>
+        </span>
+        <span class="price">$255.62</span>
+      </li>
+      <li class="row">
+        <span class="label">
+          <span class="chip">🚇 Transit</span>
+          <span class="line">Suica/PASMO preload (¥3,000)</span>
+        </span>
+        <span class="price">$20.00</span>
+      </li>
+      <li class="row">
+        <span class="label">
+          <span class="chip">🏎️ Mario Kart</span>
+          <span class="line">Street karting experience</span>
+        </span>
+        <span class="price">$94.65</span>
+      </li>
+      <li class="row">
+        <span class="label">
+          <span class="chip">🎨 teamLab</span>
+          <span class="line">teamLab Planets entry</span>
+        </span>
+        <span class="price">$26.75</span>
+      </li>
+      <li class="row">
+        <span class="label">
+          <span class="chip">🎡 Disney</span>
+          <span class="line">Tokyo Disney Sea pass</span>
+        </span>
+        <span class="price">$55.05</span>
+      </li>
+      <li class="row">
+        <span class="label">
+          <span class="chip">🌆 Shibuya</span>
+          <span class="line">Shibuya Sky ticket</span>
+        </span>
+        <span class="price">$15.90</span>
+      </li>
+
+      <li class="row total-row" aria-label="fixed total">
+        <span class="label">
+          <span class="chip total-chip">✨ Total (fixed)</span>
+        </span>
+        <span class="price total-price">$992.40</span>
+      </li>
+    </ul>
+
+    <p class="tip">
+      Save booking PDFs offline, add barcodes to your wallet, and preload a Suica/PASMO at the airport.
+    </p>
   </section>
 
   <!-- Trip Recap -->
@@ -37,13 +122,13 @@
     </p>
   </section>
 
-  <!-- Trip Highlights -->
+  <!-- Highlights & What We Did -->
   <section class="trip-section two-column">
     <div>
       <h2>✨ Trip Highlights</h2>
       <ul>
         <li>Raced through the streets in Mario Kart</li>
-        <li>Spent the day at Disney Tokyo</li>
+        <li>Spent the day at Tokyo Disney</li>
         <li>Tried authentic Japanese street food</li>
       </ul>
     </div>
@@ -53,28 +138,174 @@
         <li>✓ Visited iconic sites</li>
         <li>✓ Tasted traditional cuisine</li>
         <li>✓ Drove Mario Karts in Tokyo</li>
-        <li>✓ Enjoyed Disney Tokyo</li>
+        <li>✓ Enjoyed Tokyo Disney</li>
       </ul>
     </div>
   </section>
 
-  <!-- Photo Gallery -->
+  <!-- Itinerary (Day 0 + 8 days, no AM/PM) -->
+  <section id="itinerary" class="trip-section itinerary">
+    <h2>🧭 - 8 Day Tokyo Itinerary</h2>
+    <p class="itinerary-sub">Tap a day to peek inside ✨</p>
+
+    <div class="itinerary-list">
+
+
+      <!-- Day 1 -->
+      <details class="day">
+        <summary>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="day-title">Day 1 — Shinjuku (Tue)</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </summary>
+        <div class="day-content">
+          <ul class="list-cute">
+                    <li>Land in Tokyo; pick up Suica/PASMO</li>
+            <li>Take the metro to Airbnb in Shinjuku</li>
+            <li>Check in and settle</li>
+            <li>Dinner nearby & explore Omoide Yokocho / neon streets</li>
+          </ul>
+          <p class="tip">Some Golden Gai bars have a cover charge—carry a little cash.</p>
+        </div>
+      </details>
+
+      <!-- Day 2 -->
+      <details class="day">
+        <summary>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="day-title">Day 2 — Harajuku & Shibuya (Wed)</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </summary>
+        <div class="day-content">
+          <ul class="list-cute">
+            <li>Hachiko statue → cross Shibuya Crossing</li>
+            <li>Don Quijote + arcade buildings</li>
+            <li>Walk to Harajuku (Takeshita Street)</li>
+            <li>Yoyogi Park → Meiji Jingu</li>
+            <li>Shibuya Sky (book ahead; go for sunset views)</li>
+          </ul>
+          <p class="tip">Prime Shibuya Sky slots sell out—reserve early.</p>
+        </div>
+      </details>
+
+      <!-- Day 3 -->
+      <details class="day">
+        <summary>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="day-title">Day 3 — Asakusa, Akihabara & Ueno (Thu)</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </summary>
+        <div class="day-content">
+          <ul class="list-cute">
+            <li>Be ready early for Senso-ji & Kaminarimon Gate</li>
+            <li>Five-story Pagoda → Nakamise Street</li>
+            <li>Asakusa Culture Info Center (8F view)</li>
+            <li>Hoppy Street → Denbouin-dori snacks</li>
+            <li>Akihabara: Radio Kaikan & GiGO arcades</li>
+            <li>Ueno: Museum of Nature & Science, Inari Shrine</li>
+          </ul>
+          <p class="tip">Arriving early at Senso-ji means softer light and fewer crowds.</p>
+        </div>
+      </details>
+
+      <!-- Day 4 -->
+      <details class="day">
+        <summary>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="day-title">Day 4 — Tokyo DisneySea (Fri)</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </summary>
+        <div class="day-content">
+          <ul class="list-cute">
+            <li>DisneySea adventures, snacks, parades, and shows</li>
+          </ul>
+          <p class="tip">Use the official app for wait times and mobile orders.</p>
+        </div>
+      </details>
+
+      <!-- Day 5 -->
+      <details class="day">
+        <summary>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="day-title">Day 5 — Tsukiji & Ginza (Sat)</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </summary>
+        <div class="day-content">
+          <ul class="list-cute">
+            <li>Tsukiji Outer Market: fish stalls & bites</li>
+            <li>Ramen Takahashi (or a local favorite)</li>
+            <li>Ginza Six → Uniqlo flagship (12F) → Itoya stationery</li>
+          </ul>
+          <p class="tip">Go early to Tsukiji for the freshest samples.</p>
+        </div>
+      </details>
+
+      <!-- Day 6 -->
+      <details class="day">
+        <summary>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="day-title">Day 6 — teamLab Planets & Mario Kart (Sun)</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </summary>
+        <div class="day-content">
+          <ul class="list-cute">
+            <li>teamLab Planets (barefoot digital art)</li>
+            <li>Mario Kart street drive (license/permit as needed)</li>
+          </ul>
+          <p class="tip">Wear shorts or pants you can roll up—some exhibits involve water.</p>
+        </div>
+      </details>
+
+      <!-- Day 7 -->
+      <details class="day">
+        <summary>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="day-title">Day 7 — Day Trip to Kamakura (Mon)</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </summary>
+        <div class="day-content">
+          <ul class="list-cute">
+            <li>Great Buddha (Kotoku-in) & Hasedera</li>
+            <li>Komachi-dori snacks → Enoden seaside ride</li>
+          </ul>
+          <p class="tip">Grab an Enoden pass if you’ll hop along the coast.</p>
+        </div>
+      </details>
+
+      <!-- Day 8 -->
+      <details class="day">
+        <summary>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="day-title">Day 8 — Chill Morning & Departure (Tue)</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </summary>
+        <div class="day-content">
+          <ul class="list-cute">
+            <li>Easy breakfast & last-minute shopping</li>
+            <li>Head to the airport ✈️</li>
+          </ul>
+          <p class="tip">Top up Suica/PASMO before you go—keep it for next time!</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Gallery -->
   <section class="trip-section">
     <h2>📷 Photo Memories</h2>
     <div class="gallery-grid">
-      <img src="mario.jpg" alt="Mario Kart Experience" />
-      <img src="Disney1.JPG" alt="Disney Tokyo Fun" />
-      <img src="tt.JPG" alt="Tokyo Nightlife" />
-      <img src="ttt.JPG" alt="Mario Kart Experience" />
-      <img src="yy.JPG" alt="Disney Tokyo Fun" />
-      <img src="mm.JPG" alt="Tokyo Nightlife" />
-      <img src="IMG_9533.JPG" alt="Mario Kart Experience" />
-      <img src="IMG_9745.JPG" alt="Disney Tokyo Fun" />
-      <img src="pp.JPG" alt="Tokyo Nightlife" />
-      <img src="www.JPG" alt="Mario Kart Experience" />
-      <img src="ooo.JPG" alt="Disney Tokyo Fun" />
-      <img src="mmm.JPG" alt="Tokyo Nightlife" />
-
+      <img src="mario.jpg" alt="Mario Kart street experience in Tokyo" />
+      <img src="Disney1.JPG" alt="Smiling at Tokyo Disney" />
+      <img src="tt.JPG" alt="Tokyo nightlife city lights" />
+      <img src="ttt.jpg" alt="Another angle of Mario Kart experience" />
+      <img src="yy.JPG" alt="Popcorn bucket at Disney" />
+      <img src="mm.JPG" alt="Skyline view at night" />
+      <img src="IMG_9533.JPG" alt="Group photo in costumes" />
+      <img src="IMG_9745.JPG" alt="Disney parade moment" />
+      <img src="pp.JPG" alt="Street food close-up" />
+      <img src="www.jpg" alt="Cruising in karts" />
+      <img src="ooo.JPG" alt="Disney castle evening lights" />
+      <img src="mmm.JPG" alt="City reflections at night" />
     </div>
   </section>
 
@@ -83,8 +314,8 @@
     <h2>❤️ Traveler Reflections</h2>
     <ul>
       <li><strong>“Best trip I've ever taken!”</strong> – Michelle</li>
-      <li><strong>“Racing through Tokyo was a dream come true.”</strong> – Cassanadra</li>
-      <li><strong>“Disney Tokyo was so magical, I didn’t want to leave.”</strong> – Michelle</li>
+      <li><strong>“Racing through Tokyo was a dream come true.”</strong> – Cassandra</li>
+      <li><strong>“Tokyo Disney was so magical, I didn’t want to leave.”</strong> – Michelle</li>
     </ul>
   </section>
 
@@ -92,20 +323,21 @@
   <footer>
     <a href="index.html#trips" class="back-btn">← Back to Trips</a>
   </footer>
-<!-- Theme Toggle Script -->
-<script>
-  // Theme toggle
-  const toggle = document.getElementById('toggle-theme');
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-  });
 
-  window.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('theme') === 'dark') {
+  <!-- Scripts -->
+  <script>
+    // Simple theme toggle (persists across page loads)
+    const btn = document.getElementById('toggle-theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem('theme');
+
+    if ((saved === 'dark') || (!saved && prefersDark)) {
       document.body.classList.add('dark');
     }
-  });
-</script>
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
